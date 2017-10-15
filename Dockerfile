@@ -3,7 +3,7 @@ MAINTAINER Ivan Sim, ihcsim@gmail.com
 
 ARG VCS_REF
 LABEL org.label-schema.vcs-ref=$VCS_REF \
-      org.label-schema.vcs-url="https://github.com/ihcsim/docker-wso2apim"
+      org.label-schema.vcs-url="https://github.com/bjansen/docker-wso2apim"
 
 ARG APIM_VERSION=${APIM_VERSION:-2.1.0}
 RUN wget -P /opt http://download.openpkg.org/components/cache/wso2am/wso2am-${APIM_VERSION}.zip && \
