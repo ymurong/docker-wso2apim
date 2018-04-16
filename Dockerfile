@@ -6,7 +6,7 @@ LABEL org.label-schema.vcs-ref=$VCS_REF \
       org.label-schema.vcs-url="https://github.com/ihcsim/docker-wso2apim"
 
 ARG APIM_VERSION=${APIM_VERSION:-2.1.0}
-RUN wget  --user-agent="testuser" --referer="http://connect.wso2.com/wso2/getform/reg/new_product_download"  http://product-dist.wso2.com/products/api-manager/${APIM_VERSION}/wso2am-${APIM_VERSION}.zip && \
+RUN wget -P /opt --user-agent="testuser" --referer="http://connect.wso2.com/wso2/getform/reg/new_product_download"  http://product-dist.wso2.com/products/api-manager/${APIM_VERSION}/wso2am-${APIM_VERSION}.zip && \
     apt-get update && \
     apt-get install -y zip && \
     apt-get clean && \
